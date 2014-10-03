@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	h1= title
+	form#formAddTask(name="addtask",method="post",action="/addtask")
+		input#inputTaskName(type="text",placeholder="taskname",name="taskname")
+		br
+		input#inputPriority(type="checkbox", placeholder="Priority", name="high", value="low")
+		input#inputPriority(type="checkbox", placeholder="Priority", name="moderate", value="moderate")
+		input#inputPriority(type="checkbox", placeholder="Priority", name="low", value="low")
+		br		
+		input#inputName(type="text", placeholder="name", name="ownername")
+		input#inputemail(type="text", placeholder="email", name="email")
+		
+		button#btnsubmit(type="submit") submit
+		
+		
+		
+		
+		
+		
+		

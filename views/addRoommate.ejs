@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title> TaskYak </title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		body 		{ padding-top:80px; word-wrap:break-word; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Add Roommate</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+	
+	<form action = "/addtask" method ="post">
+	    <div class="form-group">
+			<label>Title</label>
+			<input type="text" class="form-control" name="title">
+		</div>
+		
+		<div class="form-group">
+			<label>Priority</label>
+			<select>
+			    <option value="high"> High</option>
+				<option value="medium"> Medium</option>
+				<option value="low"> Low</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<label>Who?</label>
+			<input type="text" class="form-control" name="who">
+		</div>
+		
+		<div class="form-group">
+			<label>Status</label>
+			<input type="text" class="form-control" name="status">
+		</div>
+
+</div>

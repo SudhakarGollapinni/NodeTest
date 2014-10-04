@@ -2,18 +2,58 @@ extends layout
 
 block content
 	h1= title
+	
+	script.
+		var i=0;
+		var j=0;
+		function add()
+		{
+			i++;
+			j++;
+			//Create an input type dynamically.
+			var element = document.createElement("input");
+			//Assign different attributes to the element.
+			element.type="text";
+			element.name="i";
+			element.placeholder=i;
+			
+			var element1 = document.createElement("input");
+			element1.type="text";
+			element1.name="j";
+			element1.placeholder=j;
+			
+			
+			//Append the element in page
+			var parent=document.getElementById("fooBar");
+			parent.appendChild(element);
+			parent.appendChild(element1);
+		}
+	
 	form#formAddTask(name="addtask",method="post",action="/addtask")
 		input#inputTaskName(type="text",placeholder="taskname",name="taskname")
 		br
-		input#inputPriority(type="checkbox", placeholder="Priority", name="high", value="low")
-		input#inputPriority(type="checkbox", placeholder="Priority", name="moderate", value="moderate")
-		input#inputPriority(type="checkbox", placeholder="Priority", name="low", value="low")
+		select(name="Priority")
+			option(value="High") High
+			option(value="Moderate") Moderate
+			option(value="Low") Low
+		br
+		
+	
+		input#inputaddtextbox(type="button" value="Add" onclick="add()")
+		span#fooBar
+		
+		
 		br		
 		input#inputName(type="text", placeholder="name", name="ownername")
 		input#inputemail(type="text", placeholder="email", name="email")
-		
 		button#btnsubmit(type="submit") submit
 		
+		
+		
+		
+		
+		
+			
 		
 		
 		
